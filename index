@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Diseño y visualización de información</title>
+
+        <style>
+            /* ESTO ES UN COMENTARIO. ABAJO ENCONTRARÁ MÁS COMENTARIOS */
+
+            /* RESET: Los navegadores traen márgenes y rellenos por defecto que cambian
+            según el elemento. Los ponemos todos en cero para empezar desde una base
+            pareja y controlar nosotros los espacios. */
+
+            * {
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;
+            }
+
+            /* VARIABLES DE COLOR */
+
+            :root {
+              --rojo: #b51f1f;
+              --gris-oscuro: #333;
+              --gris-medio: #666;
+              --gris-claro: #999;
+              --borde: #ddd;
+            }
+
+            /* LO DEMÁS */
+
+            body {
+              font-family: Helvetica, Arial, serif;
+              margin: 0;
+              color: var(--gris-oscuro);
+            }
+
+            .contenedor {
+              max-width: 800px;
+              margin: 0 auto;
+              padding: 0 3rem;
+            }
+
+
+            nav {
+              padding: 1.25rem 0;
+              font-size: calc(0.65rem + 0.1vw);
+              letter-spacing: 0.075rem;
+              text-transform: uppercase;
+              box-shadow: 0 0 3px var(--borde);
+            }
+
+            nav > div.contenedor {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            }
+
+            div.nombre-curso {
+              color: var(--gris-oscuro);
+              font-weight: 700;
+            }
+
+            div.nombre-evaluacion {
+              color: var(--gris-claro);
+            }
+
+
+            header {
+              text-align: center;
+              padding: 2rem 1rem;
+            }
+
+            h1 {
+              margin-top: 2rem;
+              font-size: 2.7rem;
+              line-height: 1.15;
+              color: var(--gris-oscuro);
+            }
+
+            h2 {
+              font-size: 1.35rem;
+              color: var(--rojo);
+              margin-top: 0.5rem;
+              margin-bottom: 1rem;
+              font-style: italic;
+              font-weight: 400;
+            }
+
+            h3 {
+              font-family: Arial, sans-serif;
+              font-size: 0.8rem;
+              color: var(--gris-medio);
+              margin-bottom: 20px;
+            }
+
+            h3 a {
+              color: var(--gris-oscuro);
+            }
+
+
+            article {
+              padding-bottom: 3rem;
+            }
+
+
+            p {
+              font-size: 0.92rem;
+              line-height: 1.65;
+              margin-bottom: 1rem;
+            }
+
+            p > em {
+              font-style: italic;
+              font-weight: 700;
+              color: var(--gris-oscuro);
+            }
+
+
+            /* INTRODUCCIÓN */
+
+            .introduccion {
+              border-left: 2px solid var(--borde);
+              padding-left: 1rem;
+              margin-bottom: 2rem;
+            }
+
+            .introduccion p {
+              font-style: italic;
+              font-size: 1rem;
+            }
+
+
+            /* IMÁGENES */
+
+            figure {
+              margin: 2rem 0;
+              padding: 1rem;
+              border: 1px solid var(--borde);
+            }
+
+            figure img {
+              width: 100%;
+              display: block;
+              border: 1px solid var(--borde);
+            }
+
+            figcaption {
+              font-family: Arial, sans-serif;
+              font-size: 0.78rem;
+              color: var(--gris-medio);
+              text-align: center;
+              margin-top: 0.6rem;
+              font-style: italic;
+            }
+
+            .descripcion-imagen {
+              font-family: Arial, sans-serif;
+              font-size: 0.75rem;
+              line-height: 1.5;
+              color: var(--gris-medio);
+              margin-top: 0.8rem;
+              padding-top: 0.8rem;
+              border-top: 1px solid var(--borde);
+            }
+
+            .descripcion-imagen strong {
+              color: var(--rojo);
+            }
+
+
+            /* CUADROS DESTACADOS */
+
+            .destacado {
+              border: 1px solid var(--borde);
+              background-color: #f7f7f7;
+              padding: 1rem;
+              margin: 1.5rem 0;
+            }
+
+            .destacado p {
+              margin-bottom: 0;
+              font-size: 0.88rem;
+            }
+
+
+            /* COMPARACIÓN */
+
+            .comparacion {
+              display: flex;
+              justify-content: space-between;
+              margin: 1.5rem 0 2rem;
+            }
+
+            .comparacion .destacado {
+              width: 48%;
+              margin: 0;
+              background-color: white;
+            }
+
+
+            footer {
+              box-shadow: 0 0 3px var(--borde);
+              padding: 1.25rem 0;
+              text-align: center;
+              font-family: Arial, sans-serif;
+              font-size: calc(0.65rem + 0.1vw);
+              letter-spacing: 0.075rem;
+              color: var(--rojo);
+            }
+
+
+            /* AJUSTE PARA PANTALLAS PEQUEÑAS */
+
+            @media (max-width: 600px) {
+
+              .contenedor {
+                padding: 0 1.5rem;
+              }
+
+              nav > div.contenedor {
+                display: block;
+              }
+
+              h1 {
+                font-size: 2rem;
+              }
+
+              .comparacion {
+                display: block;
+              }
+
+              .comparacion .destacado {
+                width: 100%;
+                margin-bottom: 1rem;
+              }
+            }
+
+        </style>
+    </head>
+
+
+    <body>
+
+        <nav class="masthead">
+            <div class="contenido contenedor">
+
+                <div class="nombre-curso">
+                    Diseño y Visualización de Información
+                </div>
+
+                <div class="nombre-evaluacion">
+                    Evaluación diagnóstica 1
+                </div>
+
+            </div>
+        </nav>
+
+
+        <main class="contenedor">
+
+            <header>
+
+                <h1>
+                    Harry Beck’s London Underground Map (1931)
+                </h1>
+
+                <h2>
+                    Diseño en torno a la funcionalidad
+                </h2>
+
+                <h3>
+                    Por
+                    <a href="#">Fernanda Valenzuela</a>,
+                    <a href="#">Martina Casas</a>,
+                    <a href="#">Marthin Rivera</a>,
+                    <a href="#">Gonzalo Monsalves</a> y
+                    <a href="#">Violeta Santander</a>
+                </h3>
+
+            </header>
+
+
+            <article>
+
+                <!-- INTRODUCCIÓN -->
+
+                <div class="introduccion">
+
+                    <p>
+                        El mapa del metro de Londres, diseñado por Harry Beck,
+                        es una de las piezas gráficas más icónicas y notables
+                        del diseño, pues se convirtió en el modelo estándar
+                        para los sistemas de transporte subterráneo del mundo.
+                        Aunque suele pasar desapercibido para los pasajeros,
+                        fue una innovación clave para simplificar la lectura
+                        de las redes de metro.
+                    </p>
+
+                </div>
+
+
+                <!-- CONTEXTO -->
+
+                <p>
+                    <em>Contexto de la pieza.</em>
+                    El primer ferrocarril subterráneo del mundo fue el
+                    Metropolitan Railway de Londres, inaugurado en 1863.
+                    Su objetivo era reducir la congestión del tráfico,
+                    provocada por el gran flujo migratorio del campo a la
+                    ciudad durante la Revolución Industrial, un cambio
+                    para el que Londres no estaba preparado.
+                </p>
+
+                <p>
+                    Con su inauguración surgieron los primeros mapas para
+                    orientar a los pasajeros. En sus inicios, estos diseños
+                    imitaban la geografía real de la ciudad para relacionar
+                    las líneas del metro con las calles de la superficie.
+                </p>
+
+
+                <!-- MAPA 1897 -->
+
+                <figure>
+
+                    <img
+                        src="mapa-1897.webp"
+                        alt="Mapa antiguo de Londres de 1897 con numerosas calles y nombres. Las líneas ferroviarias aparecen superpuestas sobre la geografía real de la ciudad."
+                    />
+
+                    <figcaption>
+                        Mapa del metro de Londres, 1897.
+                    </figcaption>
+
+                    <div class="descripcion-imagen">
+                        <strong>Descripción accesible:</strong>
+                        mapa antiguo de Londres con una gran cantidad de calles
+                        y nombres impresos. Las rutas ferroviarias aparecen
+                        superpuestas sobre la geografía real de la ciudad,
+                        generando una imagen visualmente densa.
+                    </div>
+
+                </figure>
+
+
+                <!-- PROBLEMA -->
+
+                <div class="destacado">
+
+                    <p>
+                        <em>El problema comienza a aparecer.</em>
+                        La precisión geográfica permitía relacionar el metro
+                        con la superficie, pero a medida que aumentaban las
+                        líneas, la información se acumulaba y el centro del
+                        mapa se volvía difícil de leer.
+                    </p>
+
+                </div>
+
+
+                <p>
+                    Con la expansión del servicio en 1908, las distintas
+                    líneas se unificaron en un solo mapa impreso en formato
+                    de bolsillo y póster, para mostrar el sistema de forma
+                    integrada y facilitar la orientación de los pasajeros
+                    por la ciudad.
+                </p>
+
+                <p>
+                    Sin embargo, al mantener una precisión geográfica estricta,
+                    la zona central quedaba muy saturada, lo que dificultaba
+                    la lectura del plano.
+                </p>
+
+
+                <!-- MAPA 1908 -->
+
+                <figure>
+
+                    <img
+                        src="mapa-1908.webp"
+                        alt="Mapa del metro de Londres de 1908 con varias líneas de colores sobre una representación geográfica detallada de la ciudad."
+                    />
+
+                    <figcaption>
+                        Mapa de bolsillo del metro, 1908.
+                    </figcaption>
+
+                    <div class="descripcion-imagen">
+                        <strong>Descripción accesible:</strong>
+                        mapa de Londres con varias líneas de metro diferenciadas
+                        por color. Las líneas siguen recorridos irregulares
+                        sobre una base geográfica detallada y se concentran
+                        especialmente en la zona central.
+                    </div>
+
+                </figure>
+
+
+                <!-- PROPUESTA DE BECK -->
+
+                <p>
+                    <em>La propuesta de Harry Beck.</em>
+                    En 1931, Beck propuso un diseño completamente revolucionario:
+                    un diagrama que no era geográficamente correcto y que
+                    utilizaba únicamente líneas horizontales, verticales y
+                    diagonales de 45°.
+                </p>
+
+                <p>
+                    Aunque su idea fue rechazada en un principio por
+                    considerarse demasiado radical, se aceptó con algunas
+                    modificaciones y se publicó oficialmente en 1933.
+                    Este nuevo esquema permitió que los usuarios se orientaran
+                    con mayor rapidez y facilidad.
+                </p>
+
+                <p>
+                    Aunque el trazado se ha actualizado con los años,
+                    los principios de diseño establecidos por Beck se
+                    mantienen vigentes hasta hoy.
+                </p>
+
+
+                <!-- MAPA BECK -->
+
+                <figure>
+
+                    <img
+                        src="mapa-beck-1933.webp"
+                        alt="Diagrama del metro de Londres diseñado por Harry Beck. Las líneas de distintos colores son rectas y se organizan horizontal, vertical y diagonalmente."
+                    />
+
+                    <figcaption>
+                        Mapa de bolsillo del metro, por Harry Beck, 1933.
+                    </figcaption>
+
+                    <div class="descripcion-imagen">
+                        <strong>Descripción accesible:</strong>
+                        diagrama del metro compuesto por líneas rectas de
+                        distintos colores conectadas mediante estaciones.
+                        La geografía de Londres casi desaparece y la red se
+                        organiza principalmente mediante líneas horizontales,
+                        verticales y diagonales de 45°.
+                    </div>
+
+                </figure>
+
+
+                <!-- COMPARACIÓN -->
+
+                <div class="comparacion">
+
+                    <div class="destacado">
+
+                        <p>
+                            <em>Antes.</em>
+                            El mapa privilegiaba la fidelidad geográfica
+                            y mostraba calles, distancias y recorridos reales.
+                        </p>
+
+                    </div>
+
+
+                    <div class="destacado">
+
+                        <p>
+                            <em>Con Beck.</em>
+                            El mapa privilegia la comprensión del sistema:
+                            estaciones, conexiones y cambios de línea.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FUNCIÓN -->
+
+                <p>
+                    <em>Función de la pieza: ¿Qué problema resolvía?</em>
+                    El mapa resolvió el problema de la zona central, que
+                    quedaba muy saturada en los diseños anteriores y
+                    dificultaba la lectura del plano.
+                </p>
+
+                <p>
+                    Trabajando como dibujante técnico, Beck aplicó a su diseño
+                    la misma lógica visual de los diagramas de circuitos
+                    eléctricos, priorizando la usabilidad por encima de la
+                    fidelidad del terreno.
+                </p>
+
+                <p>
+                    Comprendió que el usuario no necesitaba conocer la
+                    distancia geográfica exacta de las calles, sino comprender
+                    con rapidez la red de conexiones entre las distintas
+                    estaciones.
+                </p>
+
+
+                <div class="destacado">
+
+                    <p>
+                        <em>Decisión de diseño.</em>
+                        Reducir la fidelidad geográfica para aumentar la
+                        legibilidad. La forma deja de imitar el territorio
+                        y comienza a representar el funcionamiento de la red.
+                    </p>
+
+                </div>
+
+
+                <!-- LEGADO -->
+
+                <p>
+                    <em>
+                        Legado: ¿Cómo se utiliza esa misma lógica visual
+                        en casos contemporáneos?
+                    </em>
+                    El legado de este diseño es la lógica con la que se
+                    elaboran los mapas de metro en todo el mundo.
+                </p>
+
+                <p>
+                    Sin esta innovación, los esquemas seguirían siendo
+                    geográficamente precisos; con el aumento de líneas
+                    y recorridos cruzados, se habrían vuelto complejos y
+                    difíciles de leer, perjudicando la experiencia del usuario.
+                </p>
+
+                <p>
+                    Por esta razón, esta pieza es fundamental. Aunque parezca
+                    un detalle menor, facilita una acción cotidiana para miles
+                    de usuarios.
+                </p>
+
+                <p>
+                    <em>
+                        El diseño no siempre es extravagante; a veces se
+                        encuentra en lo que pasa desapercibido, y es
+                        precisamente esa invisibilidad lo que lo hace
+                        funcional y eficiente.
+                    </em>
+                </p>
+
+            </article>
+
+        </main>
+
+
+        <footer>
+            Jueves 20 de agosto, 2026
+        </footer>
+
+    </body>
+</html>
