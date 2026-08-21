@@ -133,6 +133,20 @@
               margin-top: 0.2rem;
             }
 
+            .descripcion-imagen {
+              font-family: Arial, sans-serif;
+              font-size: 0.75rem;
+              line-height: 1.5;
+              color: var(--gris-medio);
+              margin-top: 0.8rem;
+              padding-top: 0.8rem;
+              border-top: 1px solid var(--borde);
+            }
+
+            .descripcion-imagen strong {
+              color: var(--gris-oscuro);
+            }
+
             footer {
               box-shadow: 0 0 3px var(--borde);
               padding: 1.25rem 0;
@@ -146,8 +160,10 @@
     </head>
 
     <body>
+
         <nav class="masthead">
             <div class="contenido contenedor">
+
                 <span class="nombre-curso">
                     Diseño y Visualización de Información
                 </span>
@@ -155,15 +171,21 @@
                 <span class="nombre-evaluacion">
                     Evaluación diagnóstica 1
                 </span>
+
             </div>
         </nav>
 
         <main class="contenedor">
 
             <header>
-                <h1>Harry Beck’s London Underground Map (1931)</h1>
 
-                <h2>Diseño en torno a la funcionalidad</h2>
+                <h1>
+                    Harry Beck’s London Underground Map (1931)
+                </h1>
+
+                <h2>
+                    Diseño en torno a la funcionalidad
+                </h2>
 
                 <h3>
                     Por
@@ -173,21 +195,20 @@
                     <a href="#">Gonzalo Monsalves</a> y
                     <a href="#">Violeta Santander</a>
                 </h3>
+
             </header>
 
             <article>
 
                 <div class="destacado">
                     <p>
-                        <em>
-                            El mapa del metro de Londres, diseñado por Harry Beck,
-                            es una de las piezas gráficas más icónicas y notables
-                            del diseño, pues se convirtió en el modelo estándar
-                            para los sistemas de transporte subterráneo del mundo.
-                            Aunque suele pasar desapercibido para los pasajeros,
-                            fue una innovación clave para simplificar la lectura
-                            de las redes de metro.
-                        </em>
+                        El mapa del metro de Londres, diseñado por Harry Beck,
+                        es una de las piezas gráficas más icónicas y notables
+                        del diseño, pues se convirtió en el modelo estándar
+                        para los sistemas de transporte subterráneo del mundo.
+                        Aunque suele pasar desapercibido para los pasajeros,
+                        fue una innovación clave para simplificar la lectura
+                        de las redes de metro.
                     </p>
                 </div>
 
@@ -209,6 +230,7 @@
                 </p>
 
                 <figure>
+
                     <img
                         src="mapa-1897.webp"
                         alt="Mapa antiguo de Londres de 1897 con numerosas calles y nombres"
@@ -217,6 +239,15 @@
                     <figcaption>
                         Mapa del metro de Londres, 1897.
                     </figcaption>
+
+                    <div class="descripcion-imagen">
+                        <strong>Descripción accesible:</strong>
+                        mapa antiguo de Londres con una gran cantidad de calles
+                        y nombres impresos. Las rutas ferroviarias aparecen
+                        superpuestas sobre la geografía real de la ciudad,
+                        generando una imagen visualmente densa.
+                    </div>
+
                 </figure>
 
                 <div class="destacado">
@@ -244,6 +275,7 @@
                 </p>
 
                 <figure>
+
                     <img
                         src="mapa-1908.webp"
                         alt="Mapa del metro de Londres de 1908 con varias líneas de colores"
@@ -252,6 +284,15 @@
                     <figcaption>
                         Mapa de bolsillo del metro, 1908.
                     </figcaption>
+
+                    <div class="descripcion-imagen">
+                        <strong>Descripción accesible:</strong>
+                        mapa de Londres con varias líneas de metro diferenciadas
+                        por color. Las líneas siguen recorridos irregulares
+                        sobre una base geográfica detallada y se concentran
+                        especialmente en la zona central.
+                    </div>
+
                 </figure>
 
                 <p>
@@ -277,6 +318,7 @@
                 </p>
 
                 <figure>
+
                     <img
                         src="mapa-beck-1933.webp"
                         alt="Diagrama del metro de Londres diseñado por Harry Beck"
@@ -285,6 +327,16 @@
                     <figcaption>
                         Mapa de bolsillo del metro, por Harry Beck, 1933.
                     </figcaption>
+
+                    <div class="descripcion-imagen">
+                        <strong>Descripción accesible:</strong>
+                        diagrama del metro compuesto por líneas rectas de
+                        distintos colores conectadas mediante estaciones.
+                        La geografía de Londres casi desaparece y la red se
+                        organiza principalmente mediante líneas horizontales,
+                        verticales y diagonales de 45°.
+                    </div>
+
                 </figure>
 
                 <div class="destacado">
@@ -367,10 +419,12 @@
                 </div>
 
             </article>
+
         </main>
 
         <footer>
             Viernes 21 de agosto, 2026
         </footer>
+
     </body>
 </html>
